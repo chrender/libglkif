@@ -29,6 +29,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+
 #ifndef glk_blorb_c_INCLUDED 
 #define glk_blorb_c_INCLUDED 
 
