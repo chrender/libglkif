@@ -154,7 +154,7 @@ z_file *zfile_from_glk_strid(strid_t str, char *filename, int filetype,
     return NULL;
 
   result->file_object = str;
-  result->filename = strdup(filename);
+  result->filename = filename != NULL ? strdup(filename) : NULL;
   result->filetype = filetype;
   result->fileaccess = fileaccess;
   result->implementation = FILE_IMPLEMENTATION_GLK;
