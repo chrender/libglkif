@@ -255,13 +255,27 @@ int glkint_interface_read_char(uint16_t UNUSED(tenth_seconds),
 }
 
 void glkint_show_status(z_ucs *room_description,
-    int UNUSED(status_line_mode), int16_t UNUSED(parameter1),
-    int16_t UNUSED(parameter2))
+    int status_line_mode, int16_t parameter1, int16_t parameter2)
 {
+  char buf[128];
+
   glk_set_window(statusline);    
-  glk_set_style(style_Normal | stylehint_ReverseColor);
   glk_window_clear(statusline);
+  glk_set_style(style_Subheader);
   glk_put_string_uni(room_description);
+
+  glk_set_style(style_Normal);
+  if (status_line_mode == SCORE_MODE_SCORE_AND_TURN)
+  {
+    snprintf(buf, 128, "  Score: %d, Turns: %d", parameter1, parameter2);
+    glk_put_string(buf);
+  }
+  else if (status_line_mode == SCORE_MODE_TIME)
+  {
+    snprintf(buf, 128, "%02d:%02d", parameter1, parameter2);
+    glk_put_string(buf);
+  }
+
   glk_set_window(mainwin);    
 }
 
