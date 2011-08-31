@@ -285,7 +285,7 @@ int glkint_filescanf(z_file *fileref, char *format, ...)
   return result;
 }
 
-off_t glkint_getfilepos(z_file *fileref)
+long glkint_getfilepos(z_file *fileref)
 {
   if (fileref->implementation == FILE_IMPLEMENTATION_STDIO)
     return z_filesys_interface_c.getfilepos(fileref);
@@ -293,7 +293,7 @@ off_t glkint_getfilepos(z_file *fileref)
     return glk_stream_get_position((strid_t)fileref->file_object);
 }
 
-int glkint_setfilepos(z_file *fileref, off_t seek, int whence)
+int glkint_setfilepos(z_file *fileref, long seek, int whence)
 {
   if (fileref->implementation == FILE_IMPLEMENTATION_STDIO)
     return z_filesys_interface_c.setfilepos(fileref, seek, whence);
@@ -439,6 +439,12 @@ int glkint_read_dir(struct z_dir_ent *result, z_dir *dirref)
 }
 
 
+static int glkint_make_dir(char *path)
+{
+  return z_filesys_interface_c.make_dir(path);
+}
+
+
 bool glkint_is_filename_directory(char *filename)
 {
   int filedes;
@@ -485,6 +491,7 @@ struct z_filesys_interface glkint_filesys_interface =
   &glkint_open_dir,
   &glkint_close_dir,
   &glkint_read_dir,
+  &glkint_make_dir,
   &glkint_is_filename_directory
 };
 
