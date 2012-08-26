@@ -1,0 +1,14 @@
+
+AM_CFLAGS = $(libfizmo_CFLAGS)
+AM_CPPFLAGS =
+LDADD = $(libfizmo_LIBS)
+
+localedir = $(datarootdir)/fizmo/locales
+
+noinst_LIBRARIES = libglkif.a
+libglkif_a_SOURCES = ../locales/libglkif_locales.c glk_interface.c glk_blorb_if. glk_filesys_if.c glk_screen_if.c
+
+if ENABLE_TRACING
+AM_CFLAGS += -DENABLE_TRACING=
+endif
+
