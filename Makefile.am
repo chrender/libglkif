@@ -35,7 +35,7 @@ install-dev:: libglkif.a
 	echo 'Requires: $(LIBGLKIF_REQS) ' >>$(PKGFILE)
 	echo 'Requires.private:' >>$(PKGFILE)
 	echo 'Cflags: -I$(fizmo_build_prefix)/include/fizmo $(LIBGLKIF_NONPKG_CFLAGS)' >>$(PKGFILE)
-	echo 'Libs: -L$(fizmo_build_prefix)/lib/fizmo -lfizmo $(LIBGLKIF_NONPKG_LIBS)' >>$(PKGFILE)
+	echo 'Libs: -L$(fizmo_build_prefix)/lib/fizmo -lglkif $(LIBGLKIF_NONPKG_LIBS)' >>$(PKGFILE)
 	echo >>$(PKGFILE)
 
 install-locales::
