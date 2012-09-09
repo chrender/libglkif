@@ -14,6 +14,7 @@ SUBDIRS = src/glk_interface .
 noinst_LIBRARIES = libglkif.a
 
 libglkif.a:
+	cd src/glk_interface ; make ; cd ../..
 	mv src/glk_interface/libglkif.a .
 
 install-dev:: libglkif.a
@@ -31,7 +32,7 @@ install-dev:: libglkif.a
 	echo 'Name: libglkif' >>$(PKGFILE)
 	echo 'Description: libglkif' >>$(PKGFILE)
 	echo 'Version: 0.1.4' >>$(PKGFILE)
-	echo 'Requires: libfizmo >= 0.7.4 ' >>$(PKGFILE)
+	echo 'Requires: $(LIBGLKIF_REQS) ' >>$(PKGFILE)
 	echo 'Requires.private:' >>$(PKGFILE)
 	echo 'Cflags: -I$(fizmo_build_prefix)/include/fizmo $(LIBGLKIF_NONPKG_CFLAGS)' >>$(PKGFILE)
 	echo 'Libs: -L$(fizmo_build_prefix)/lib/fizmo -lfizmo $(LIBGLKIF_NONPKG_LIBS)' >>$(PKGFILE)

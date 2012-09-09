@@ -99,6 +99,7 @@ AC_CHECK_LIB([glktermw],
 AM_CONDITIONAL([ENABLE_TRACING],
                 [test "$enable_tracing" = "yes"])
 
+AC_SUBST([LIBGLKIF_REQS], $libglkif_reqs)
 AC_SUBST([LIBGLKIF_NONPKG_CFLAGS], $libglkif_nonpkg_cflags)
 AC_SUBST([LIBGLKIF_NONPKG_LIBS], $libglkif_nonpkg_libs)
 
