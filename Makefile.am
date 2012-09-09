@@ -8,7 +8,7 @@ if FIZMO_BUILD_PREFIX_EMPTY
 endif
 
 PKG_DIR = $(fizmo_build_prefix)/lib/pkgconfig
-PKGFILE = $(PKG_DIR)/libcellif.pc
+PKGFILE = $(PKG_DIR)/libglkif.pc
 
 SUBDIRS = src/glk_interface .
 noinst_LIBRARIES = libglkif.a
@@ -33,8 +33,8 @@ install-dev:: libglkif.a
 	echo 'Version: 0.1.4' >>$(PKGFILE)
 	echo 'Requires: libfizmo >= 0.7.4 ' >>$(PKGFILE)
 	echo 'Requires.private:' >>$(PKGFILE)
-	echo 'Cflags: -I$(fizmo_build_prefix)/include/fizmo $(GLKTERMW_CFLAGS)' >>$(PKGFILE)
-	echo 'Libs: -L$(fizmo_build_prefix)/lib/fizmo -lfizmo $(GLKTERMW_LIBS)' >>$(PKGFILE)
+	echo 'Cflags: -I$(fizmo_build_prefix)/include/fizmo $(LIBGLKIF_NONPKG_CFLAGS)' >>$(PKGFILE)
+	echo 'Libs: -L$(fizmo_build_prefix)/lib/fizmo -lfizmo $(LIBGLKIF_NONPKG_LIBS)' >>$(PKGFILE)
 	echo >>$(PKGFILE)
 
 install-locales::

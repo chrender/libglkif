@@ -1,7 +1,7 @@
 
-AM_CFLAGS = $(libfizmo_CFLAGS)
+AM_CFLAGS = $(libfizmo_CFLAGS) $(LIBGLKIF_NONPKG_CFLAGS)
 AM_CPPFLAGS =
-LDADD = $(libfizmo_LIBS)
+LDADD = $(libfizmo_LIBS) $(LIBGLKIF_NONPKG_LIBS)
 
 localedir = $(datarootdir)/fizmo/locales
 
