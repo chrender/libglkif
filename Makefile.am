@@ -14,7 +14,7 @@ SUBDIRS = src/glk_interface .
 noinst_LIBRARIES = libglkif.a
 
 libglkif.a:
-	cd src/glk_interface ; make ; cd ../..
+	cd src/glk_interface ; make
 	mv src/glk_interface/libglkif.a .
 
 install-dev:: libglkif.a
