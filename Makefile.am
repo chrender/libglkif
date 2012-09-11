@@ -3,9 +3,7 @@ AUTOMAKE_OPTIONS = -Wno-override
 
 localedir = $(datarootdir)/fizmo/locales
 
-if FIZMO_BUILD_PREFIX_EMPTY
-  fizmo_build_prefix=$(DESTDIR)$(prefix)
-endif
+fizmo_build_prefix=$(DEV_BUILD_PREFIX)
 
 PKG_DIR = $(fizmo_build_prefix)/lib/pkgconfig
 PKGFILE = $(PKG_DIR)/libglkif.pc
@@ -13,7 +11,7 @@ PKGFILE = $(PKG_DIR)/libglkif.pc
 SUBDIRS = src/glk_interface .
 noinst_LIBRARIES = libglkif.a
 
-libglkif.a:
+libglkif.a::
 	cd src/glk_interface ; make
 	mv src/glk_interface/libglkif.a .
 
