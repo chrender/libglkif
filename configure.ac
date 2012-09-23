@@ -5,7 +5,7 @@ AC_ARG_ENABLE([tracing],
  [],
  [enable_tracing=no])
 
-include(config-flags.m4)
+m4_include(config-flags.m4)
 
 AC_INIT([libglkif], [0.1.4])
 
@@ -19,7 +19,7 @@ libglkif_reqs="libfizmo >= 0.7.4"
 
 PKG_CHECK_MODULES([libfizmo], [libfizmo >= 0.7.4])
 
-include(config-libs.m4)
+m4_include(config-libs.m4)
 
 AM_CONDITIONAL([ENABLE_TRACING],
                 [test "$enable_tracing" = "yes"])
