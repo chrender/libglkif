@@ -1,4 +1,7 @@
 
+   Version 0.1.6
+ - Renamed "install-locales" to "install-data" build target.
+
    Version 0.1.5
  + 0.1.5 was finished at about Fri Nov 30 14:02:28 CET 2012.
  - Fixed include statement in "configure.ac".
