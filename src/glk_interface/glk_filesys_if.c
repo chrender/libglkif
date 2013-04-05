@@ -169,10 +169,10 @@ int glkint_closefile(z_file *file_to_close)
   }
 }
 
-int glkint_getchar(z_file *fileref)
+int glkint_readchar(z_file *fileref)
 {
   if (fileref->implementation == FILE_IMPLEMENTATION_STDIO)
-    return z_filesys_interface_c.getchar(fileref);
+    return z_filesys_interface_c.readchar(fileref);
   else
   {
     int ch = glk_get_char_stream((strid_t)fileref->file_object);
@@ -182,10 +182,10 @@ int glkint_getchar(z_file *fileref)
   }
 }
 
-size_t glkint_getchars(void *ptr, size_t len, z_file *fileref)
+size_t glkint_readchars(void *ptr, size_t len, z_file *fileref)
 {
   if (fileref->implementation == FILE_IMPLEMENTATION_STDIO)
-    return z_filesys_interface_c.getchars(ptr, len, fileref);
+    return z_filesys_interface_c.readchars(ptr, len, fileref);
   else
     return glk_get_buffer_stream((strid_t)fileref->file_object, ptr, len);
 }
@@ -331,10 +331,10 @@ int glkint_setfilepos(z_file *fileref, long seek, int whence)
 }
 
 
-int glkint_ungetchar(int c, z_file *fileref)
+int glkint_unreadchar(int c, z_file *fileref)
 {
   if (fileref->implementation == FILE_IMPLEMENTATION_STDIO)
-    return z_filesys_interface_c.ungetchar(c, fileref);
+    return z_filesys_interface_c.unreadchar(c, fileref);
   else
   {
     i18n_translate_and_exit(
@@ -488,8 +488,8 @@ struct z_filesys_interface glkint_filesys_interface =
 {
   &glkint_openfile,
   &glkint_closefile,
-  &glkint_getchar,
-  &glkint_getchars,
+  &glkint_readchar,
+  &glkint_readchars,
   &glkint_writechar,
   &glkint_writechars,
   &glkint_writestring,
@@ -500,7 +500,7 @@ struct z_filesys_interface glkint_filesys_interface =
   &glkint_vfilescanf,
   &glkint_getfilepos,
   &glkint_setfilepos,
-  &glkint_ungetchar,
+  &glkint_unreadchar,
   &glkint_flushfile,
   &glkint_get_last_file_mod_timestamp,
   &glkint_get_fileno,
