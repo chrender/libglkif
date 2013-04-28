@@ -43,7 +43,6 @@ AC_CHECK_LIB([glktermw],
        [AC_LANG_SOURCE(
         [[
           #include <stdio.h>
-          #include <curses.h>
           #include "$glk_h_dir/glk.h"
           #include "$glk_h_dir/glkstart.h"
           glkunix_argumentlist_t glkunix_arguments[] = { };

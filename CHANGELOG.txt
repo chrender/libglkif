@@ -1,5 +1,6 @@
 
    Version 0.1.6
+ - Fixed verification of libglktermw location in "config-libs.m4".
  - Renamed "install-locales" to "install-data" build target.
  - Adapted to new readchar function names in file system interface.
 
