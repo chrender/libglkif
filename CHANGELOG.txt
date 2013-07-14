@@ -1,4 +1,7 @@
 
+   Version 0.1.7
+ - Adapted to automake v1.14 "subdir-objects" option.
+
    Version 0.1.6
  + 0.1.6 was finished at about Wed Jun 5 18:49:00 CEST 2013.
  - Fixed verification of libglktermw location in "config-libs.m4".

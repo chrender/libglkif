@@ -59,7 +59,7 @@ install-dev:: libglkif.a
 	echo >>$(PKGFILE)
 	echo 'Name: libglkif' >>$(PKGFILE)
 	echo 'Description: libglkif' >>$(PKGFILE)
-	echo 'Version: 0.1.6' >>$(PKGFILE)
+	echo 'Version: 0.1.7' >>$(PKGFILE)
 	echo 'Requires: $(LIBGLKIF_REQS) ' >>$(PKGFILE)
 	echo 'Requires.private:' >>$(PKGFILE)
 	echo 'Cflags: -I$(fizmo_build_prefix)/include/fizmo $(LIBGLKIF_NONPKG_CFLAGS)' >>$(PKGFILE)
