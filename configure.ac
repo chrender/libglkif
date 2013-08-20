@@ -45,9 +45,9 @@ AC_PROG_CC
 AC_PROG_RANLIB
 AM_PROG_AR
 
-libglkif_reqs="libfizmo >= 0.7.7"
+libglkif_reqs="libfizmo >= 0.7.8"
 
-PKG_CHECK_MODULES([libfizmo], [libfizmo >= 0.7.7])
+PKG_CHECK_MODULES([libfizmo], [libfizmo >= 0.7.8])
 
 m4_include(config-libs.m4)
 
