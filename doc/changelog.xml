@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<changelog>
+  <change version="0.1.7">
+    <logentry>Adapted to automake v1.14 “subdir-objects” option.</logentry>
+  </change>
+
+  <change version="0.1.6">
+    <datetime day-of-week="Wed" month="Jun" day="5" hour="18"
+      minute="49" second="00" timezone="CEST" year="2013"/>
+    <logentry>Fixed verification of libglktermw location in “config-libs.m4”.</logentry>
+    <logentry>Renamed “install-locales” to “install-data” build target.</logentry>
+    <logentry>Adapted to new readchar function names in file system interface.</logentry>
+  </change>
+
+  <change version="0.1.5">
+    <datetime day-of-week="Fri" month="Nov" day="30" hour="14"
+      minute="02" second="28" timezone="CET" year="2012"/>
+    <logentry>Fixed include statement in “configure.ac”.</logentry>
+  </change>
+
+  <change version="0.1.4">
+    <datetime day-of-week="Mon" month="Sep" day="17" hour="22"
+      minute="14" second="52" timezone="CEST" year="2012"/>
+    <logentry>Adapted to new autoconf/automake build system.</logentry>
+  </change>
+
+  <change version="0.1.3">
+    <datetime day-of-week="Wed" month="Aug" day="1" hour="21"
+      minute="42" second="17" timezone="CEST" year="2012"/>
+    <logentry>Merged with Andrew Plotkin's iOS-fizmo implementation: replaced old “fizmo_register_ask_user_for_file_function” with “prompt_for_file” implementation in “glk_screen_if.c”, added quote box support.</logentry>
+  </change>
+
+  <change version="0.1.2">
+    <datetime day-of-week="Fri" month="Mar" day="9" hour="21"
+      minute="01" second="12" timezone="CET" year="2012"/>
+    <logentry>Merged zarf's GLK changes into “glk_screen_if.c”. The new version 0.1.2 fixes screen size detection, timed input and adds lowering of the input line.</logentry>
+    <logentry>Fixed missing $(DESTDIR) variable – should already have been present since version 0.1.1.</logentry>
+  </change>
+
+  <change version="0.1.1">
+    <datetime day-of-week="Sun" month="Nov" day="6" hour="22"
+      minute="44" second="17" timezone="CET" year="2011"/>
+    <logentry>Fixed missing “override” statments for CFLAGS in Makefiles.</logentry>
+    <logentry>Fixed $(DESTDIR) evaluation in config.[default|macports].mk.</logentry>
+    <logentry>Adapted Makefiles and configuration to use standard GNU Makefile variables instead of INSTALL_PATH and FIZMO_BIN_DIR.</logentry>
+  </change>
+
+  <change version="0.1.0">
+    <datetime day-of-week="Sun" month="Sep" day="18" hour="08"
+      minute="41" second="18" timezone="CEST" year="2011"/>
+    <logentry>libglkif was built from code in Andrew Plotkin's github repository. It represents an interface translating fizmo's Z-machine output operations into GLK-invocations. The current code should be seen as a first experimental release. Please note that bug reports should be sent to <a href="fizmo@spellbreaker.org"/> instead of sending them to Andrew Plotkin.</logentry>
+    <logentry>The “fizmo-glktermw” frontend relies on libglkif for it's GLK output.</logentry>
+  </change>
+</changelog>
+
