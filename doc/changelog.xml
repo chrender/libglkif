@@ -48,7 +48,7 @@
   <change version="0.1.0">
     <datetime day-of-week="Sun" month="Sep" day="18" hour="08"
       minute="41" second="18" timezone="CEST" year="2011"/>
-    <logentry>libglkif was built from code in Andrew Plotkin's github repository. It represents an interface translating fizmo's Z-machine output operations into GLK-invocations. The current code should be seen as a first experimental release. Please note that bug reports should be sent to <a href="fizmo@spellbreaker.org"/> instead of sending them to Andrew Plotkin.</logentry>
+    <logentry>libglkif was built from code in Andrew Plotkin's github repository. It represents an interface translating fizmo's Z-machine output operations into GLK-invocations. The current code should be seen as a first experimental release. Please note that bug reports should be sent to <a href="mailto:fizmo@spellbreaker.org"/> instead of sending them to Andrew Plotkin.</logentry>
     <logentry>The “fizmo-glktermw” frontend relies on libglkif for it's GLK output.</logentry>
   </change>
 </changelog>
