@@ -57,7 +57,7 @@
 
    **Version 0.1.0 —  18, 2011**
 
- - libglkif was built from code in Andrew Plotkin's github repository. It represents an interface translating fizmo's Z-machine output operations into GLK-invocations. The current code should be seen as a first experimental release. Please note that bug reports should be sent to [mailto:fizmo@spellbreaker.org](mailto:fizmo@spellbreaker.org) instead of sending them to Andrew Plotkin.
+ - libglkif was built from code in Andrew Plotkin's github repository. It represents an interface translating fizmo's Z-machine output operations into GLK-invocations. The current code should be seen as a first experimental release. Please note that bug reports should be sent to  instead of sending them to Andrew Plotkin.
  - The “fizmo-glktermw” frontend relies on libglkif for it's GLK output.
 
 
