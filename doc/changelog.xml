@@ -2,6 +2,7 @@
 <changelog>
   <change version="0.1.7">
     <logentry>Adapted to automake v1.14 “subdir-objects” option.</logentry>
+    <logentry>Added “clean-dev” build target for better cleanup of installed development files, which helps debian packaging.</logentry>
   </change>
 
   <change version="0.1.6">
