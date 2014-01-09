@@ -5,6 +5,7 @@
 
  - Adapted to automake v1.14 “subdir-objects” option.
  - Added “clean-dev” build target for better cleanup of installed development files, which helps debian packaging.
+ - Added missing license/copyright information.
 
 ---
 
