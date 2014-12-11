@@ -37,7 +37,11 @@ AC_ARG_ENABLE([tracing],
 
 m4_include(config-flags.m4)
 
-AC_INIT([libglkif], [0.1.7])
+AC_INIT(
+ [libglkif],
+ [0.1.7],
+ fizmo@spellbreaker.org,
+ libglkif)
 
 AC_CONFIG_AUX_DIR([.])
 AM_INIT_AUTOMAKE([-Wall -Werror foreign])
