@@ -55,7 +55,7 @@
 #include <tools/tracelog.h>
 
 static char* interface_name = "glk-screen";
-static char* interface_version = "0.1.8";
+static char* interface_version = "0.1.9";
 
 static z_file *(*game_open_interface)(z_file *) = NULL;
 static z_file *story_stream = NULL;

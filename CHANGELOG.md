@@ -1,6 +1,13 @@
 
 
 
+   **Version 0.1.9 — October 16, 2015**
+
+ - Small improvements for ncurses detection.
+
+---
+
+
    **Version 0.1.8 — October 9, 2015**
 
  - Minor autoconf-changes to make build work with fizmo-dist-0.7.10.
