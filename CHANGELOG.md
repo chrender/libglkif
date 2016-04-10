@@ -1,6 +1,13 @@
 
 
 
+   **Version 0.2.0 — April 10, 2016**
+
+ - Made libglkif independet of actual implementation. This should make the glktermw and remglk work independently of each other.
+
+---
+
+
    **Version 0.1.9 — October 16, 2015**
 
  - Small improvements for ncurses detection.

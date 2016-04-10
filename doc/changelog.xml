@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <changelog>
+  <change version="0.2.0">
+    <datetime day-of-week="Sun" month="4" day="10" hour="13"
+      minute="58" second="04" timezone="CEST" year="2016"/>
+    <logentry>Made libglkif independet of actual implementation. This should make the glktermw and remglk work independently of each other.</logentry>
+  </change>
+
   <change version="0.1.9">
     <datetime day-of-week="Fri" month="10" day="16" hour="22"
       minute="16" second="18" timezone="CEST" year="2015"/>

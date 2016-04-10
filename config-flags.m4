@@ -1,13 +1,7 @@
 
-AC_ARG_WITH([glktermw-includedir],
-  [AS_HELP_STRING([--with-glktermw-includedir],
-          [Specify include directory to use for glktermw])],
+AC_ARG_WITH([glk-includedir],
+  [AS_HELP_STRING([--with-glk-includedir],
+          [Specify include directory to use for glk-headers])],
   [],
-  [with_glktermw_includedir=])
-
-AC_ARG_WITH([glktermw-libdir],
-  [AS_HELP_STRING([--with-glktermw-libdir],
-          [Specify library directory for glktermw])],
-  [],
-  [with_glktermw_libdir=])
+  [with_glk_includedir=])
 

@@ -3,7 +3,7 @@
 #
 # This file is part of fizmo.
 #
-# Copyright (c) 2009-2015 Christoph Ender.
+# Copyright (c) 2009-2016 Christoph Ender.
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -39,7 +39,7 @@ m4_include(config-flags.m4)
 
 AC_INIT(
  [libglkif],
- [0.1.9],
+ [0.2.0],
  fizmo@spellbreaker.org,
  libglkif)
 
@@ -49,9 +49,9 @@ AC_PROG_CC
 AC_PROG_RANLIB
 AM_PROG_AR
 
-libglkif_reqs="libfizmo >= 0.7.8"
+libglkif_reqs="libfizmo >= 0.7.11"
 
-PKG_CHECK_MODULES([libfizmo], [libfizmo >= 0.7.8])
+PKG_CHECK_MODULES([libfizmo], [libfizmo >= 0.7.11])
 
 m4_include(config-libs.m4)
 
