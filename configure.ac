@@ -39,7 +39,7 @@ m4_include(config-flags.m4)
 
 AC_INIT(
  [libglkif],
- [0.2.1],
+ [0.2.2],
  fizmo@spellbreaker.org,
  libglkif)
 
@@ -49,16 +49,17 @@ AC_PROG_CC
 AC_PROG_RANLIB
 AM_PROG_AR
 
-libglkif_reqs="libfizmo >= 0.7.12"
+libglkif_reqs="libfizmo >= 0.7.13"
 
-PKG_CHECK_MODULES([libfizmo], [libfizmo >= 0.7.12])
+PKG_CHECK_MODULES([libfizmo], [libfizmo >= 0.7.13])
 
 m4_include(config-libs.m4)
+
+AM_CONDITIONAL([FIZMO_DIST_BUILD], [test "x" = ""])
 
 AM_CONDITIONAL([ENABLE_TRACING],
                 [test "$enable_tracing" = "yes"])
 
-AC_SUBST([DEV_BUILD_PREFIX], "$DESTDIR$prefix")
 AC_SUBST([LIBGLKIF_REQS], $libglkif_reqs)
 AC_SUBST([LIBGLKIF_NONPKG_CFLAGS], $libglkif_nonpkg_cflags)
 AC_SUBST([LIBGLKIF_NONPKG_LIBS], $libglkif_nonpkg_libs)
