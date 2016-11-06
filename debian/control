@@ -1,0 +1,32 @@
+Source: libglkif
+Section: libdevel
+Priority: extra
+Maintainer: Christoph Ender <christoph.ender@spellbreaker.org>
+Build-Depends: debhelper (>= 9.0.0),
+ dpkg-dev (>= 1.16.1~),
+ dh-autoreconf,
+ automake,
+ autoconf,
+ pkg-config,
+ libfizmo-dev,
+ remglk
+Standards-Version: 3.9.8
+Homepage: https://fizmo.spellbreaker.org/
+
+Package: libglkif-common
+Architecture: all
+Depends: ${misc:Depends}
+Description: Provides localization data for libglkif
+ This package is required by all packages which are using the static library
+ provided by the "libglkif-dev" package. Usually there's no need to
+ install this package manually.
+
+Package: libglkif-dev
+Architecture: any
+Depends: libglkif-common,
+ ${misc:Depends}
+Description: Interface translating libfizmo output to Glk-API
+ This interface will translate all Z-Machine output, including window
+ operations and text output, into the respective Glk invocations.
+ This can be used to build a fizmo-backed GLK-frontend.
+
