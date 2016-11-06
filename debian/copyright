@@ -1,10 +1,12 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: libglkif
-Upstream-Contact: Christoph Ender <Christoph.Ender@Spellbreaker.org>
+Upstream-Contact: Andrew Plotkin <erkyrath@eblong.com>
+ Christoph Ender <Christoph.Ender@Spellbreaker.org>
 Source: https://fizmo.spellbreaker.org/sources/libglkif
 
 Files: *
-Copyright: 2011-2016, Christoph Ender <Christoph.Ender@Spellbreaker.org>
+Copyright: 2011-2016, Andrew Plotkin <erkyrath@eblong.com>
+ Christoph Ender <Christoph.Ender@Spellbreaker.org>
 License: BSD-3-clause
 
 License: BSD-3-clause
