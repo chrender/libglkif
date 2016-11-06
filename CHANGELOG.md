@@ -1,9 +1,10 @@
 
 
 
-   **Version 0.2.2**
+   **Version 0.2.2 — November 6, 2016**
 
  - Improved build system for separate library and interface builds.
+ - Include /usr/include/remglk to locate debian-packaged remglk library.
 
 ---
 

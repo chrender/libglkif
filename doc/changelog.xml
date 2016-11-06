@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <changelog>
   <change version="0.2.2">
+    <datetime day-of-week="Sun" month="11" day="6" hour="11"
+      minute="27" second="40" timezone="CET" year="2016"/>
     <logentry>Improved build system for separate library and interface builds.</logentry>
+    <logentry>Include /usr/include/remglk to locate debian-packaged remglk library.</logentry>
   </change>
 
   <change version="0.2.1">
