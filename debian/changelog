@@ -1,6 +1,6 @@
 libglkif (0.2.2-1) experimental; urgency=low
 
-  * Initial release.
+  * Initial release (Closes: #843460);
 
  -- Christoph Ender <christoph.ender@spellbreaker.org>  Sun, 6 Nov 2016 11:45:00 +0100
 
