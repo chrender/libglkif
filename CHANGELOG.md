@@ -5,6 +5,7 @@
 
  - Improved build system for separate library and interface builds.
  - Include /usr/include/remglk to locate debian-packaged remglk library.
+ - Removed “gi_dispa.h” include from glk_screen.c, it's not needed and aösp doesn't work with a “pure” remglk build.
 
 ---
 

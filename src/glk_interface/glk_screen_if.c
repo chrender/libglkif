@@ -39,7 +39,6 @@
 #include <strings.h>
 
 #include "glk.h"
-#include "gi_dispa.h"
 #include "glkstart.h" /* This comes with the Glk library. */
 
 #include "glk_interface.h"
