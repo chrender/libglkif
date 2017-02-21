@@ -3,7 +3,7 @@
 #
 # This file is part of fizmo.
 #
-# Copyright (c) 2009-2016 Christoph Ender.
+# Copyright (c) 2009-2017 Christoph Ender.
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -63,7 +63,7 @@ install-dev:: libglkif.a
 	echo >>$(pkgfile)
 	echo 'Name: libglkif' >>$(pkgfile)
 	echo 'Description: libglkif' >>$(pkgfile)
-	echo 'Version: 0.2.1' >>$(pkgfile)
+	echo 'Version: 0.2.3' >>$(pkgfile)
 	echo 'Requires: $(LIBGLKIF_REQS) ' >>$(pkgfile)
 	echo 'Requires.private:' >>$(pkgfile)
 	echo 'Cflags: -I$(dev_prefix)/include/fizmo $(LIBGLKIF_NONPKG_CFLAGS)' >>$(pkgfile)
