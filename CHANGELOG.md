@@ -1,6 +1,13 @@
 
 
 
+   **Version 0.2.3**
+
+ - Adapted to replacement of en_US locale with en_GB from libfizmo.
+
+---
+
+
    **Version 0.2.2 — November 6, 2016**
 
  - Improved build system for separate library and interface builds.
