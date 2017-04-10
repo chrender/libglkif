@@ -1,7 +1,7 @@
 
 
 
-   **Version 0.2.3**
+   **Version 0.2.3 — April 10, 2017**
 
  - Adapted to replacement of en_US locale with en_GB from libfizmo.
 
