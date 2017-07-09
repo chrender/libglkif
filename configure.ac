@@ -39,7 +39,7 @@ m4_include(config-flags.m4)
 
 AC_INIT(
  [libglkif],
- [0.2.3],
+ [0.2.4],
  fizmo@spellbreaker.org,
  libglkif)
 
