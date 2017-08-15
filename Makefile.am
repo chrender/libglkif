@@ -36,10 +36,10 @@ localedir = $(datarootdir)/fizmo/locales
 if FIZMO_DIST_BUILD
   dev_prefix=$(FIZMO_DIST_BUILD_PREFIX)
 else
-  dev_prefix=$(prefix)
+  dev_prefix=$(DESTDIR)/$(prefix)
 endif
 
-pkg_dir = $(DESTDIR)$(dev_prefix)/lib/pkgconfig
+pkg_dir = $(dev_prefix)/lib/pkgconfig
 pkgfile = $(pkg_dir)/libglkif.pc
 
 SUBDIRS = src/glk_interface .
@@ -50,11 +50,11 @@ libglkif.a::
 	mv src/glk_interface/libglkif.a .
 
 install-dev:: libglkif.a
-	mkdir -p $(DESTDIR)$(dev_prefix)/lib/fizmo
-	mkdir -p $(DESTDIR)$(dev_prefix)/include/fizmo/glk_interface
+	mkdir -p $(dev_prefix)/lib/fizmo
+	mkdir -p $(dev_prefix)/include/fizmo/glk_interface
 	cp src/glk_interface/*.h \
-	  $(DESTDIR)$(dev_prefix)/include/fizmo/glk_interface
-	cp libglkif.a $(DESTDIR)$(dev_prefix)/lib/fizmo
+	  $(dev_prefix)/include/fizmo/glk_interface
+	cp libglkif.a $(dev_prefix)/lib/fizmo
 	mkdir -p $(pkg_dir)
 	echo 'prefix=$(dev_prefix)' >$(pkgfile)
 	echo 'exec_prefix=$${prefix}' >>$(pkgfile)
@@ -63,7 +63,7 @@ install-dev:: libglkif.a
 	echo >>$(pkgfile)
 	echo 'Name: libglkif' >>$(pkgfile)
 	echo 'Description: libglkif' >>$(pkgfile)
-	echo 'Version: 0.2.3' >>$(pkgfile)
+	echo 'Version: 0.2.4' >>$(pkgfile)
 	echo 'Requires: $(LIBGLKIF_REQS) ' >>$(pkgfile)
 	echo 'Requires.private:' >>$(pkgfile)
 	echo 'Cflags: -I$(dev_prefix)/include/fizmo $(LIBGLKIF_NONPKG_CFLAGS)' >>$(pkgfile)
@@ -82,9 +82,9 @@ install-data-local::
 # a - sign. rmdir may fail in clean-dev in case other libs have installed
 # development files, or in case clean-dev has been run before.
 clean-dev::
-	-rm "$(DESTDIR)$(dev_prefix)/lib/fizmo/libglkif.a"
-	-rmdir "$(DESTDIR)$(dev_prefix)/lib/fizmo"
-	rm -rf "$(DESTDIR)$(dev_prefix)/include/fizmo/glk_interface"
-	-rmdir "$(DESTDIR)$(dev_prefix)/include/fizmo"
+	-rm "$(dev_prefix)/lib/fizmo/libglkif.a"
+	-rmdir "$(dev_prefix)/lib/fizmo"
+	rm -rf "$(dev_prefix)/include/fizmo/glk_interface"
+	-rmdir "$(dev_prefix)/include/fizmo"
 	-rm "$(pkgfile)"
 
