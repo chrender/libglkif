@@ -1,4 +1,9 @@
 
+   Version 0.2.4 -- August 14, 2017
+ - Fix superfluous libraries and includes during install when using $DESTDIR,
+   addressing github issue #21.
+ - Fix version in "glk_screen_if.c".
+
    Version 0.2.3 -- April 10, 2017
  - Adapted to replacement of en_US locale with en_GB from libfizmo.
 
@@ -60,8 +65,8 @@
  - libglkif was built from code in Andrew Plotkin's github repository. It
    represents an interface translating fizmo's Z-machine output operations
    into GLK-invocations. The current code should be seen as a first
-   experimental release. Please note that bug reports should be sent to 
-   instead of sending them to Andrew Plotkin.
+   experimental release. Please note that bug reports should be sent to
+   mailto:fizmo@spellbreaker.org instead of sending them to Andrew Plotkin.
  - The "fizmo-glktermw" frontend relies on libglkif for it's GLK output.
 
 
