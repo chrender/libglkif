@@ -3,7 +3,7 @@ libglkif_nonpkg_cflags=""
 
 AC_CHECK_HEADER([glk.h],
   [],
-  [for dir in $with_glk_includedir $with_glktermw_includedir $with_remglk_includedir /usr/include /usr/local/include /usr/include/remglk/ ; do
+  [for dir in $with_glk_includedir /usr/include/glk $with_glktermw_includedir $with_remglk_includedir /usr/include /usr/local/include ; do
      AC_MSG_CHECKING(for $dir/glk.h)
      if [ test -e $dir/glk.h ]; then
        AC_MSG_RESULT(yes)
