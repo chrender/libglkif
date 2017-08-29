@@ -4606,7 +4606,7 @@ ac_fn_c_check_header_mongrel "$LINENO" "glk.h" "ac_cv_header_glk_h" "$ac_include
 if test "x$ac_cv_header_glk_h" = xyes; then :
 
 else
-  for dir in $with_glk_includedir $with_glktermw_includedir $with_remglk_includedir /usr/include /usr/local/include /usr/include/remglk/ ; do
+  for dir in $with_glk_includedir /usr/include/glk $with_glktermw_includedir $with_remglk_includedir /usr/include /usr/local/include ; do
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $dir/glk.h" >&5
 $as_echo_n "checking for $dir/glk.h... " >&6; }
      if  test -e $dir/glk.h ; then
