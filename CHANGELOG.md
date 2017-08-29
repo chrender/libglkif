@@ -1,10 +1,11 @@
 
 
 
-   **Version 0.2.4 — August 14, 2017**
+   **Version 0.2.4 — August 29, 2017**
 
  - Fix superfluous libraries and includes during install when using $DESTDIR, addressing github issue #21.
  - Fix version in “glk_screen_if.c”.
+ - Adapt to new 16-bit screen sizes from libfizmo screen interface.
 
 ---
 

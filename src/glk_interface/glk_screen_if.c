@@ -219,12 +219,12 @@ void glkint_recover_library_state()
   glkint_estimate_screen_size();
 }
 
-uint8_t glkint_get_screen_height()
+uint16_t glkint_get_screen_height()
 {
   return screenestheight;
 }
 
-uint8_t glkint_get_screen_width()
+uint16_t glkint_get_screen_width()
 {
   return screenestwidth;
 }
