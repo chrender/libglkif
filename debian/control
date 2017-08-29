@@ -9,7 +9,8 @@ Build-Depends: debhelper (>= 9.0.0),
  autoconf,
  pkg-config,
  libfizmo-dev,
- glk-headers-dev
+ glk-headers-dev,
+ glk-blorb-headers-dev
 Standards-Version: 4.0.0
 Homepage: https://fizmo.spellbreaker.org/
 
