@@ -1,6 +1,7 @@
 libglkif (0.2.4-1) unstable; urgency=low
 
   * New upstream version.
+  * Replace "remglk" with "glk-headers-dev" dependency.
   * Updated BSD-3 license to include contributors. License is now to 100%
     identical to the 3-Clause BSD License.
 
