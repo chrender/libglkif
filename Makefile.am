@@ -38,7 +38,7 @@ if FIZMO_DIST_BUILD
   pkg_prefix=$(FIZMO_DIST_BUILD_PREFIX)
 else
   dev_prefix=$(DESTDIR)/$(prefix)
-  pkg_prefix=$(DESTDIR)/$(prefix)
+  pkg_prefix=$(prefix)
 endif
 
 pkg_dir = $(dev_prefix)/lib/pkgconfig
