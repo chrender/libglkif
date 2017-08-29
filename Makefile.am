@@ -35,8 +35,10 @@ localedir = $(datarootdir)/fizmo/locales
 
 if FIZMO_DIST_BUILD
   dev_prefix=$(FIZMO_DIST_BUILD_PREFIX)
+  pkg_prefix=$(FIZMO_DIST_BUILD_PREFIX)
 else
   dev_prefix=$(DESTDIR)/$(prefix)
+  pkg_prefix=$(DESTDIR)/$(prefix)
 endif
 
 pkg_dir = $(dev_prefix)/lib/pkgconfig
@@ -56,7 +58,7 @@ install-dev:: libglkif.a
 	  $(dev_prefix)/include/fizmo/glk_interface
 	cp libglkif.a $(dev_prefix)/lib/fizmo
 	mkdir -p $(pkg_dir)
-	echo 'prefix=$(dev_prefix)' >$(pkgfile)
+	echo 'prefix=$(pkg_prefix)' >$(pkgfile)
 	echo 'exec_prefix=$${prefix}' >>$(pkgfile)
 	echo 'libdir=$${exec_prefix}/lib/fizmo' >>$(pkgfile)
 	echo 'includedir=$${prefix}/include/fizmo' >>$(pkgfile)
@@ -66,8 +68,8 @@ install-dev:: libglkif.a
 	echo 'Version: 0.2.4' >>$(pkgfile)
 	echo 'Requires: $(LIBGLKIF_REQS) ' >>$(pkgfile)
 	echo 'Requires.private:' >>$(pkgfile)
-	echo 'Cflags: -I$(dev_prefix)/include/fizmo $(LIBGLKIF_NONPKG_CFLAGS)' >>$(pkgfile)
-	echo 'Libs: -L$(dev_prefix)/lib/fizmo -lglkif $(LIBGLKIF_NONPKG_LIBS)' >>$(pkgfile)
+	echo 'Cflags: -I$(pkg_prefix)/include/fizmo $(LIBGLKIF_NONPKG_CFLAGS)' >>$(pkgfile)
+	echo 'Libs: -L$(pkg_prefix)/lib/fizmo -lglkif $(LIBGLKIF_NONPKG_LIBS)' >>$(pkgfile)
 	echo >>$(pkgfile)
 
 install-data-local::
