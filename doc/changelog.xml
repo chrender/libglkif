@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <changelog>
   <change version="0.2.4">
-    <datetime day-of-week="Tue" month="8" day="29" hour="0"
-      minute="3" second="52" timezone="CEST" year="2017"/>
+    <datetime day-of-week="Sun" month="9" day="3" hour="21"
+      minute="42" second="35" timezone="CEST" year="2017"/>
     <logentry>Fix superfluous libraries and includes during install when using $DESTDIR, addressing github issue #21.</logentry>
     <logentry>Fix version in “glk_screen_if.c”.</logentry>
     <logentry>Adapt to new 16-bit screen sizes from libfizmo screen interface.</logentry>
+    <logentry>Added missing contributor phrasing to BSD-3 clause. The resulting license now exactly matches the wording used on Github and so also makes the license detection work.</logentry>
   </change>
 
   <change version="0.2.3">
