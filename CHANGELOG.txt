@@ -1,9 +1,12 @@
 
-   Version 0.2.4 -- August 29, 2017
+   Version 0.2.4 -- September 3, 2017
  - Fix superfluous libraries and includes during install when using $DESTDIR,
    addressing github issue #21.
  - Fix version in "glk_screen_if.c".
  - Adapt to new 16-bit screen sizes from libfizmo screen interface.
+ - Added missing contributor phrasing to BSD-3 clause. The resulting license
+   now exactly matches the wording used on Github and so also makes the
+   license detection work.
 
    Version 0.2.3 -- April 10, 2017
  - Adapted to replacement of en_US locale with en_GB from libfizmo.
