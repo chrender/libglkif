@@ -67,7 +67,7 @@ install-dev:: libglkif.a
 	echo >>$(pkgfile)
 	echo 'Name: libglkif' >>$(pkgfile)
 	echo 'Description: libglkif' >>$(pkgfile)
-	echo 'Version: 0.2.4' >>$(pkgfile)
+	echo 'Version: 0.2.5' >>$(pkgfile)
 	echo 'Requires: $(LIBGLKIF_REQS) ' >>$(pkgfile)
 	echo 'Requires.private:' >>$(pkgfile)
 	echo 'Cflags: -I$(pkg_prefix)/include/fizmo $(LIBGLKIF_NONPKG_CFLAGS)' >>$(pkgfile)

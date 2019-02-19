@@ -1,10 +1,18 @@
 
 
 
+   **Version 0.2.5 — Febuary 19, 2019**
+
+ - Fixed potential compile errors due to relative paths in autoconf parameters.
+ - Fixed underscores in markdown files.
+
+---
+
+
    **Version 0.2.4 — September 3, 2017**
 
  - Fix superfluous libraries and includes during install when using $DESTDIR, addressing github issue #21.
- - Fix version in “glk_screen_if.c”.
+ - Fix version in “glk\_screen\_if.c”.
  - Adapt to new 16-bit screen sizes from libfizmo screen interface.
  - Added missing contributor phrasing to BSD-3 clause. The resulting license now exactly matches the wording used on Github and so also makes the license detection work.
 
@@ -13,7 +21,7 @@
 
    **Version 0.2.3 — April 10, 2017**
 
- - Adapted to replacement of en_US locale with en_GB from libfizmo.
+ - Adapted to replacement of en\_US locale with en\_GB from libfizmo.
 
 ---
 
@@ -22,7 +30,7 @@
 
  - Improved build system for separate library and interface builds.
  - Include /usr/include/remglk to locate debian-packaged remglk library.
- - Removed “gi_dispa.h” include from glk_screen.c, it's not needed and aösp doesn't work with a “pure” remglk build.
+ - Removed “gi\_dispa.h” include from glk\_screen.c, it's not needed and aösp doesn't work with a “pure” remglk build.
 
 ---
 
@@ -89,14 +97,14 @@
 
    **Version 0.1.3 — August 1, 2012**
 
- - Merged with Andrew Plotkin's iOS-fizmo implementation: replaced old “fizmo_register_ask_user_for_file_function” with “prompt_for_file” implementation in “glk_screen_if.c”, added quote box support.
+ - Merged with Andrew Plotkin's iOS-fizmo implementation: replaced old “fizmo\_register\_ask\_user\_for\_file\_function” with “prompt\_for\_file” implementation in “glk\_screen\_if.c”, added quote box support.
 
 ---
 
 
    **Version 0.1.2 — March 9, 2012**
 
- - Merged zarf's GLK changes into “glk_screen_if.c”. The new version 0.1.2 fixes screen size detection, timed input and adds lowering of the input line.
+ - Merged zarf's GLK changes into “glk\_screen\_if.c”. The new version 0.1.2 fixes screen size detection, timed input and adds lowering of the input line.
  - Fixed missing $(DESTDIR) variable – should already have been present since version 0.1.1.
 
 ---
@@ -106,7 +114,7 @@
 
  - Fixed missing “override” statments for CFLAGS in Makefiles.
  - Fixed $(DESTDIR) evaluation in config.[default|macports].mk.
- - Adapted Makefiles and configuration to use standard GNU Makefile variables instead of INSTALL_PATH and FIZMO_BIN_DIR.
+ - Adapted Makefiles and configuration to use standard GNU Makefile variables instead of INSTALL\_PATH and FIZMO\_BIN\_DIR.
 
 ---
 
