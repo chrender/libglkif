@@ -36,8 +36,6 @@
 
   ---
 
-
-
   This is libglkif's main buildfile. […]
 
 ]]
@@ -54,6 +52,20 @@ project(libglkif
   DESCRIPTION "fizmo interpreter GLK interface library"
   VERSION 0.9.0)
 
+
+# Don't prepend libname with "lib". This will make it possible to use the
+# name defined in project() above via "${PROJECT_NAME}" without having
+# to alternate between "libmonospaceif" and "monospaceif" in various
+# statements. Furthermore, it will allow distinguishing between "libfizmo"
+# and "fizmo" projects and have "CMAKE_STATIC_LIBRARY_PREFIX" set to the
+# same value in all fizmo-related projects.
+set(CMAKE_STATIC_LIBRARY_PREFIX "")
+
+
+# Create position-independent code.
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+
 ExternalProject_Add(locale_data_preparation
   SOURCE_DIR ${CMAKE_SOURCE_DIR}/src/locales
   BINARY_DIR ${CMAKE_BINARY_DIR}/loacles_build
@@ -67,8 +79,10 @@ ExternalProject_Add(locale_data_preparation
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(LIBFIZMO REQUIRED libfizmo>=0.9.0)
 
-include_directories(${LIBFIZMO_INCLUDE_DIRS})
-link_directories(${LIBFIZMO_LIBDIR})
+# We need "glk.h".
+if(NOT GLK_H_INCLUDE_DIR)
+  message(FATAL_ERROR "You have to set \"GLK_H_INCLUDE_DIR\" in order to processed.")
+endif()
 
 option(ENABLE_TRACING "Enable tracing" OFF)
 if (ENABLE_TRACING)
@@ -85,7 +99,7 @@ if (FIZMO_DIST_VERSION)
   add_definitions(-DFIZMO_DIST_VERSION=${FIZMO_DIST_VERSION})
 endif()
 
-set (MyCSources
+set (c_sources
   src/glk_interface/glk_blorb_if.c
   src/glk_interface/glk_filesys_if.c
   src/glk_interface/glk_interface.c
@@ -94,7 +108,11 @@ set (MyCSources
   src/locales/locale_data.c
   src/locales/locale_data.h)
 
-add_library(glkif ${MyCSources})
+add_library(libglkif ${c_sources})
+
+target_include_directories(${PROJECT_NAME} PUBLIC
+  ${LIBFIZMO_INCLUDE_DIRS}
+  ${GLK_H_INCLUDE_DIR})
 
 #install(TARGETS libglkif)
 # PUBLIC_HEADER cannot be used for TARGETS fizmo, since it doesn't keep
@@ -106,7 +124,7 @@ install(DIRECTORY "${PROJECT_SOURCE_DIR}/src/" # source directory
   PATTERN "*.h" # select header files
 )
 
-install(TARGETS glkif)
+install(TARGETS libglkif)
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.pc
   DESTINATION "lib/pkgconfig")
